@@ -21,7 +21,20 @@ def get_mem_usage(option = "all"):
     elif option == "free":
         return mem.free
 
+def get_disk_usage(option = "all"):
+    disk = psutil.disk_usage('/')
+    if option == "all":
+        return disk
+    elif option == "total":
+        return disk.total
+    elif option == "free":
+        return disk.free
+    elif option == "used":
+        return disk.used
+    elif option == "percent":
+        return disk.percent
 
 if __name__ == '__main__':
     print(get_cpu_usage())
     print(get_mem_usage().percent)
+    print(get_disk_usage().percent)
