@@ -2,7 +2,7 @@
 import psutil
 
 
-def get_cpu_usage(interval = 1.0, per_cpu = False):
+def get_cpu_usage(option = "all", interval = 1.0, per_cpu = False):
     return psutil.cpu_percent(interval=interval, percpu=per_cpu)
 
 
@@ -37,4 +37,4 @@ def get_disk_usage(option = "all"):
 if __name__ == '__main__':
     print(get_cpu_usage())
     print(get_mem_usage().percent)
-    print(get_disk_usage().percent)
+    print(get_disk_usage())
