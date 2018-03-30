@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02b94cef-3374-4b3b-bb8c-99589bfc47c6" name="Default" comment="Send information to netdata by statsd gauges&#10;&#10;Finished">
+    <list default="true" id="02b94cef-3374-4b3b-bb8c-99589bfc47c6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sendData/sendData.py" afterPath="$PROJECT_DIR$/sendData/sendData.py" />
-      <change beforePath="$PROJECT_DIR$/server/server.py" afterPath="$PROJECT_DIR$/server/server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,11 +70,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sendData.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sendData.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sendData/sendData.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="5" column="65" lean-forward="true" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="103" column="6" lean-forward="false" selection-start-line="103" selection-start-column="6" selection-end-line="103" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -122,6 +131,7 @@
         <option value="$PROJECT_DIR$/monitoring/system.py" />
         <option value="$PROJECT_DIR$/sendData/sendData.py" />
         <option value="$PROJECT_DIR$/server/server.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -314,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522161843820</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Send information to netdata by statsd gauges&#10;&#10;Finished 👌:&#10; * Push data to netdata&#10; * Check if api key matches with database">
+      <created>1522406098083</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1522406098083</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -331,6 +348,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -362,7 +380,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished functions for getting info from CPU, Mem and Disk" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished functions for getting info from CPU, Mem and Disk" />
+    <MESSAGE value="Send information to netdata by statsd gauges&#10;&#10;Finished :&#10; * Push data to netdata&#10; * Check if api key matches with database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Send information to netdata by statsd gauges&#10;&#10;Finished :&#10; * Push data to netdata&#10; * Check if api key matches with database" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -520,6 +539,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="5" column="65" lean-forward="true" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="103" column="6" lean-forward="false" selection-start-line="103" selection-start-column="6" selection-end-line="103" selection-end-column="6" />
           <folding />
         </state>
       </provider>
