@@ -14,7 +14,7 @@ def collectData():
     data['CPU']['percent'] = pc.get_cpu_usage()
 
     data['Memory'] = {}
-    data['Memory']['all'] = pc.get_mem_usage("all")
+    #data['Memory']['all'] = pc.get_mem_usage("all")
     data['Memory']['total'] = pc.get_mem_usage("total")
     data['Memory']['available'] = pc.get_mem_usage("available")
     data['Memory']['percent'] = pc.get_mem_usage("percent")
@@ -22,18 +22,18 @@ def collectData():
     data['Memory']['free'] = pc.get_mem_usage("free")
 
     data['Disk'] = {}
-    data['Disk']['all'] = pc.get_disk_usage("all")
+    #data['Disk']['all'] = pc.get_disk_usage("all")
     data['Disk']['total'] = pc.get_disk_usage("total")
     data['Disk']['percent'] = pc.get_disk_usage("percent")
     data['Disk']['used'] = pc.get_disk_usage("used")
     data['Disk']['free'] = pc.get_disk_usage("free")
-
-    return json.dumps(data)
+    print(type(data))
+    return data
 
 def sendRequest(url):
 
     data = collectData()
-    headers = {'api-key': '1232123'}
+    headers = {'api-key': '123123'}
     r = requests.post(url, json=data, headers=headers)
     print(r.status_code)
 
