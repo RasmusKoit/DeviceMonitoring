@@ -1,4 +1,5 @@
 """Simple system monitor"""
+
 import psutil
 
 

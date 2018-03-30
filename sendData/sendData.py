@@ -2,6 +2,8 @@ import requests
 from monitoring import system
 import json
 
+## TODO: 3. Juhul, kui matchib siis saadab selle edasi netdata serverile.
+## TODO: 4. netdata server võtab selle vastu statsd plugini abiga
 
 def collectData():
 
@@ -28,10 +30,14 @@ def collectData():
 
     return json.dumps(data)
 
-def sendRequest(url, data):
+def sendRequest(url):
 
-    url = 'https://api.github.com/some/endpoint'
-    payload = {'some': 'data'}
-    headers = {'content-type': 'application/json'}
+    data = collectData()
+    headers = {'api-key': '1232123'}
+    r = requests.post(url, json=data, headers=headers)
+    print(r.status_code)
 
-    r = requests.post(url, data=json.dumps(payload), headers=headers)
+
+if __name__ == '__main__':
+    url = "http://127.0.0.1:5000/api"
+    sendRequest(url=url)
