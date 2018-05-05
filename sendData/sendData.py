@@ -2,8 +2,6 @@ import requests
 from monitoring import system
 import json
 
-## TODO: 3. Juhul, kui matchib siis saadab selle edasi netdata serverile.
-## TODO: 4. netdata server võtab selle vastu statsd plugini abiga
 
 def collectData():
 
@@ -33,7 +31,7 @@ def collectData():
 def sendRequest(url):
 
     data = collectData()
-    headers = {'api-key': '123123'}
+    headers = {'api-key': 'MidasateedSam222'}
     r = requests.post(url, json=data, headers=headers)
     print(r.status_code)
 
