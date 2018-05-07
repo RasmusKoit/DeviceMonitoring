@@ -39,7 +39,7 @@ def hello():
     return "Hello World!"
 
 
-@app.route("/api", methods=["post"])
+@app.route("/api/data", methods=["post"])
 def monitoringDataReceiver():
     api_key = request.headers.get('api-key')
     if getApiKey(api_key):
@@ -59,6 +59,17 @@ def monitoringDataReceiver():
             addApiKey(api_key)
             return "Unauthorized", 401
 
+
+@app.route("/api/auth", methods=["post"])
+def userLoggingIn():
+    data = request.get_json(force=True)
+
+    email =  (data["credentials"]["email"])
+    password = (data["credentials"]["password"])
+
+    print(email, password)
+
+    return "OK", 200
 
 def getApiKey(api_key):
     return ApiKeys.query.filter_by(api_key = api_key).first()
