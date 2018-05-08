@@ -1,0 +1,9 @@
+from dotenv import load_dotenv
+import os
+load_dotenv()
+
+JWT_SECRET_KEY = os.getenv("JWT-SECRET-TOKEN")
+STATSD_CLIENT_IP = os.getenv("STATSD_CLIENT_IP")
+SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_DATABASE_URI")
+SQLALCHEMY_UNKNOWN_HUBS = os.getenv("SQLALCHEMY_UNKNOWN_HUBS")
+SQLALCHEMY_USER_DB = os.getenv("SQLALCHEMY_USER_DB")
