@@ -31,7 +31,7 @@ def collectData():
 def sendRequest(url):
 
     data = collectData()
-    headers = {'api-key': 'MidasateedSam222'}
+    headers = {'api-key': '123123'}
     r = requests.post(url, json=data, headers=headers)
     print(r.status_code)
 

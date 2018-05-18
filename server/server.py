@@ -33,7 +33,9 @@ class user_auth(db.Model):
 
 class LogRequest(db.Model):
     __bind_key__ = 'key'
-    key = db.Column(db.String(80), primary_key=True, unique=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True, unique=True, autoincrement=True, nullable=False)
+    key = db.Column(db.String(80), unique=True, nullable=False)
+
 
 
 class ApiKeys(db.Model):
@@ -50,6 +52,7 @@ def hello():
 @app.route("/api/data", methods=["post"])
 def monitoringDataReceiver():
     api_key = request.headers.get('api-key')
+    print(getApiKey(api_key))
     if getApiKey(api_key):
         data = request.get_json(force=True)
         for key, value in data.items():
@@ -87,6 +90,24 @@ def userLoggingIn():
         response["errors"]["global"] = "Invalid credentials"
         response = json.dumps(response)
         return response, 400
+
+
+@app.route("/api/auth/hub", methods=["get"])
+def listUnauthHubs():
+    db.create_all()
+    hub_key = request.args.get('q')
+    unknownHubs = LogRequest.query.filter(LogRequest.key.contains(hub_key)).all()
+    response = {
+        "hubs": []
+    }
+    for hub in unknownHubs:
+        response["hubs"].append({
+            "key": hub.key,
+            "id": hub.id
+        })
+    pprint(response)
+    return json.dumps(response), 200
+
 
 
 # check hashed password with password from credentials
